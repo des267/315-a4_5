@@ -1,5 +1,4 @@
 import Monster from "../models/monster.model.js";
-import {query} from "express";
 
 export const getMonstersFromRepository = async (query) => {
 	try {

@@ -8,8 +8,8 @@ import mongoose from "mongoose";
 
 const MonsterSchema = new mongoose.Schema(
     {
-        "id": Number,
-        "name": String,
+        "id": {type: Number, required: true},
+        "name": {type: String, required: true},
         "username": String,
         "email": String,
         "address": {

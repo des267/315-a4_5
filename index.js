@@ -1,19 +1,24 @@
 import express from "express";
 import bodyParser from "body-parser";
+import router from "./routes/monsters.route.js";
+import monsters from "./routes/monsters.route.js";
+import { connectDB } from "./database/database.js";
 
 // create express server
 const app = express();
+const port = 3000;
+
+// Connect to database
+connectDB();
 
 // Setup json parser
 app.use(bodyParser.json());
 
-const port = 3000;
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended: false}));
 
-// Configure default route; indicates server is running
-app.get("/", function (request, response) {
-	response.send("Server is online");
-});
-
+// Use monster routes
+app.use("/monsters", monsters);
 
 // Configure the listening port for the server
 app.listen(port, function() {
