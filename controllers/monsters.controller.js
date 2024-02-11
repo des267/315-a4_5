@@ -35,7 +35,7 @@ export const updateMonster = async (req, res) => {
 	const {id} = req.params;
 	const {body} = req;
 	try {
-		const monsters = await updateMonsterInRepository({id: id});
+		const monster = await updateMonsterInRepository({id: id}, body);
 		res.status(200).send(monster);
 	} catch (e) {
 		res.status(500).send(e.message, "Failed to get list of monster");

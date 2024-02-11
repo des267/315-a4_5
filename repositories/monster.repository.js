@@ -11,12 +11,11 @@ export const getMonstersFromRepository = async (query) => {
 
 export const updateMonsterInRepository = async (query, update) => {
 	try {
-		const monster = await Monster.findOneAndUpdate(
+		return await Monster.findOneAndUpdate(
 			{...query},
 			{...update},
 			{new: true}
 		).lean();
-		return monster;
 	} catch (e) {
 		throw Error("Error while updating monster");
 	}
