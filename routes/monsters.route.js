@@ -1,3 +1,9 @@
+/**
+ * monsters.route.js
+ *
+ * Author: Desmond Stular
+ */
+
 import {
 	createMonster,
 	deleteMonster,

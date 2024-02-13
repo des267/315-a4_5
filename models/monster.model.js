@@ -2,6 +2,8 @@
  * monster.model.js
  *
  * Model object used by Mongoose
+ *
+ * Author: Desmond Stular
  */
 
 import mongoose from "mongoose";

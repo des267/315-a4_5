@@ -1,3 +1,9 @@
+/**
+ * home.route.js
+ *
+ * Author: Desmond Stular
+ */
+
 import express from "express";
 const router = express.Router();
 

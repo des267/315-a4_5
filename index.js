@@ -1,3 +1,9 @@
+/**
+ * index.js
+ *
+ * Author: Desmond Stular
+ */
+
 import express from "express";
 import bodyParser from "body-parser";
 import home from "./routes/home.route.js";
