@@ -51,7 +51,7 @@ export const deleteMonster = async (req, res, next) => {
 	try {
 		const monsterDeleted = await deleteMonsterFromRepository({id: id});
 		if (monsterDeleted) {
-			res.status(204).send();
+			res.status(204).send(`Monster ${id} deleted`);
 		} else {
 			res.status(404).send(e.message, `Failed to delete monster ${id}`);
 		}
