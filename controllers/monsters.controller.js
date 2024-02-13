@@ -11,8 +11,6 @@ import {
 	updateMonsterInRepository,
 	createMonsterInRepository
 } from '../repositories/monster.repository.js';
-import express from "express";
-import Monster from "../models/monster.model.js";
 
 export const getMonsters = async (req, res, next) => {
 	try {
