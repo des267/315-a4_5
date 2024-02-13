@@ -40,7 +40,7 @@ export const createMonsterInRepository = async (payload) => {
 	try {
 		// Increment monster ID section; if empty collection monster id = 1, else increment from max
 		const monsterCount = await Monster.find().countDocuments();
-		if (monsterCount === 12) {
+		if (monsterCount === 0) {
 			payload['id'] = 1;
 		}
 		else {
