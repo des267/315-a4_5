@@ -5,7 +5,7 @@ export const getMonstersFromRepository = async (query) => {
 		const monsters = await Monster.find(query);
 		return monsters;
 	} catch (e) {
-		throw Error("Error while fetching monster.");
+		throw e;
 	}
 }
 
@@ -17,7 +17,7 @@ export const updateMonsterInRepository = async (query, update) => {
 			{new: true}
 		).lean();
 	} catch (e) {
-		throw Error("Error while updating monster");
+		throw e;
 	}
 }
 
@@ -26,7 +26,7 @@ export const deleteMonsterFromRepository = async (query) => {
 		const monster = await Monster.findOneAndDelete({...query});
 		return monster;
 	} catch (e) {
-		throw Error("Error while deleting a monster");
+		throw e;
 	}
 }
 
@@ -36,6 +36,6 @@ export const createMonsterInRepository = async (payload) => {
 		const savedMonster = await newMonster.save();
 		return savedMonster;
 	} catch (e) {
-		throw Error("Error while creating a superhero");
+		throw e;
 	}
 }
